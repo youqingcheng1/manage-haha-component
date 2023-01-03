@@ -1,0 +1,75 @@
+// 列表头的筛选框
+.f-list-header {
+  border-bottom: 1px solid @c-border;
+  background: #fff;
+  margin-bottom: @m;
+  overflow: hidden;
+  .f-list-header__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: @m / 2;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .f-list-header__row-item {
+      & > * {
+        margin-bottom: 5px;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      display: block;
+      .f-list-header__row-item:last-child {
+        margin-top: @m;
+      }
+      .f-list-header__row-item:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  .filter-label {
+    color: @c-label;
+    margin-right: @m / 4;
+  }
+}
+
+// 常用box样式
+.f-box,
+.f-box--sub {
+  border: 1px solid @c-border;
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.2s;
+  overflow: hidden;
+  &.f-box--error {
+    border-color: @c-err;
+  }
+}
+.f-box {
+  padding: @m;
+  border: 1px solid @c-border;
+  border-radius: 6px;
+  &:hover {
+    box-shadow: 0px 0px 10px rgba(0, 80, 180, 0.2);
+    // box-shadow: 0px 0px 20px rgba(0, 80, 180, 0.2);
+  }
+  .f-box__inner {
+    border-bottom: 1px solid @c-border;
+    padding: @m / 2 0;
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}
+.f-box--sub {
+  padding: @m / 2 @m;
+}
+
+span.link {
+  text-decoration: underline;
+  color: @c;
+  cursor: pointer;
+}

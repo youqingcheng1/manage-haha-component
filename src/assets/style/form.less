@@ -1,0 +1,43 @@
+// 左右分栏布局
+.f-col {
+  display: flex;
+  justify-content: space-between;
+  & > aside,
+  & > main {
+    border: 1px solid @c-border;
+    padding: @m / 2 @m;
+    border-radius: 4px;
+  }
+  & > aside {
+    width: 400px;
+    min-width: 25%;
+    margin-right: @m * 2;
+    flex-shrink: 0;
+  }
+  & > main {
+    width: 100%;
+  }
+  @media screen and (max-width: 800px) {
+    display: block;
+    aside {
+      width: 100%;
+      margin-bottom: @m;
+    }
+  }
+}
+
+.f-form__buttons {
+  text-align: center;
+  padding: @m 0;
+  .el-button {
+    width: 140px !important;
+    height: 40px !important;
+    & + .el-button {
+      margin-left: @m;
+    }
+  }
+}
+
+.f_form_value {
+  max-width: 600px;
+}
