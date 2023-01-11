@@ -1,4 +1,4 @@
-import { withInstall } from 'src/utils/install'
+import { withInstall } from '@/utils/install'
 import Demo from './src/index.vue'
 
 export const HaDemo = withInstall(Demo)

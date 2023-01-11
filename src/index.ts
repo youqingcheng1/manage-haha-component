@@ -9,6 +9,7 @@ const install = (app:App): void => {
 }
 
 export {
+  HaDemo,
   HaDialog,
   install
 }

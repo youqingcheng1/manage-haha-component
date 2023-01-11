@@ -1,37 +1,40 @@
-### 组件库
+### MINIUI组件库说明
 
-基于vue 3.0 + ts + element-plus
-
-#### 打包工具
-gulp
-rollup
-```
-rollup.bundle.config.js 输出 es
-rollup.config.js 输出 components
-gulpfile.js 输出 css
-```
-
-#### 项目初始化
-nodemon -- 用于监听文件变化，执行npm指令
+基于 vue 3.0 + ts + elements plus 二次开发
 ```
 yarn install 
-npm install -g nodemon
 ```
 
-#### 本项目开发启动项目
+#### 打包工具
 ```
-vite
-``` 
-#### 组件库关联本地项目
-yalc 作为本地包软链。yalc link 需要在yarn 之后链接
+rollup --输出组件
+ - rollup.bundle.config 输出ts引入
+ - rollup.config  输出ES模块文件组件
+gulp --输出css
+vite --起本地服务，测试demo
 ```
-// 组件库
-yarn dev
+#### 组件库开发组件
+test 文件夹，引入组件，测试组件demo
+```
+yarn dev:test
+```
+#### 本地组件库关联项目开发
+yalc --创建软链包
+```
+// manage-haha-component
+yarn dev -- 打包的同时，yalc push建立本地软包
 
 // 项目
-yalc link XXX
-```
-#### 打包输出包
-```
-yarn build
+yalc link manage-haha-component
+
+// 全局引入
+import HaUi from 'manage-haha-component'
+import 'manage-haha-component/lib/index.css'
+app.use(HaUi)
+
+// 按需引入
+
+
+// demo使用
+<HauiDemo />
 ```

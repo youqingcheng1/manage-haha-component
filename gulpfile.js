@@ -13,7 +13,7 @@ const nameTransform = (str) => {
 gulp.task('default', async function () {
   return gulp.src(path.join(__dirname, 'src/components/**/style.less')).pipe(gulpLess()).pipe(minifycss())
     .pipe(rename(function (path) {
-      path.basename = 'mui-' + path.dirname.split('\\')[0]
+      path.basename = 'HaUi-' + path.dirname.split('\\')[0]
       path.extname = '.css'
     }))
     .pipe(flatten())

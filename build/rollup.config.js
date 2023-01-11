@@ -24,7 +24,7 @@ export default Object.keys(inputs).map(name => ({
   output: [
     {
       format: 'es',
-      file: path.resolve(__dirname, `../lib/mui-${name}/index.js`)
+      file: path.resolve(__dirname, `../lib/Ha-${name}/index.js`)
     }
   ],
   plugins: [
