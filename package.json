@@ -8,10 +8,10 @@
   "scripts": {
     "dev": "npm run build && nodemon --ignore dist/ --ignore node_modules/ --watch src/ -C -e js,ts,tsx,less,vue --debug -x npm run build:es",
     "dev:test": "vite --host",
-    "build:es": "npm run clean && rollup --config build/rollup.bundle.config.js && yalc push",
+    "build:es": "rollup --config build/rollup.bundle.config.js && yalc push",
     "build:components": "rollup --config ./build/rollup.config.js",
     "build:css": "gulp --gulpfile gulpfile.js",
-    "build": "npm run build:es && npm run build:components && npm run build:css && yalc push",
+    "build": "npm run clean && npm run build:es && npm run build:components && npm run build:css && yalc push",
     "clean": "rimraf lib",
     "lint": "eslint --fix --ext .ts src"
   },

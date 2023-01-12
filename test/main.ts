@@ -1,9 +1,12 @@
 import { createApp } from 'vue'
 import App from './app.vue'
-// import miniui from '@/index'
-import demo from '@/components/demo'
+// 全局引入
+import HaUi from '@/index'
+// 按需导入
+// import { HaDemo } from '@/index'
 
 const app = createApp(App)
 app
-  .use(demo)
+  // .use(HaUi)
+  .use(HaUi)
   .mount('#app')

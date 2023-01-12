@@ -1,6 +1,6 @@
 <template>
   <div class="color">
-    this is 改变测试
+    this is 改变测试1112
   </div>
 </template>
 

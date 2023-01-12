@@ -1,19 +1,23 @@
 <template>
   <div>
-    {{ satte.text }}
-    <MuiDemo />
+    {{ state.text }}
+    <HaDemo />
+    <HaImagePreview :data="state.images"></HaImagePreview>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, reactive } from 'vue'
+import image1 from './assets/image1.png'
+import image2 from './assets/image2.jpg'
 export default defineComponent({
   setup() {
-    const satte = reactive({
-      text: 'sdsds'
+    const state = reactive({
+      text: '测试页面',
+      images: [image1, image2]
     })
     return {
-      satte
+      state
     }
   }
 })

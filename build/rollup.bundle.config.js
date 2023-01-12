@@ -9,10 +9,6 @@ import less from 'rollup-plugin-less'
 import babel from 'rollup-plugin-babel'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
 
-const overrides = {
-  compilerOptions: { declaration: true, emitDeclarationOnly: true }
-}
-
 const plugins = [
   VuePlugin({
     target: 'browser',
@@ -29,10 +25,7 @@ const plugins = [
   }),
   commonJs(),
   jsonP(),
-  less({
-    exclude: [],
-    output: 'lib/index.css'
-  }),
+  less({ output: 'lib/index.css' }),
   image()
 ]
 
@@ -47,7 +40,10 @@ let configs = [
       typescript({
         exclude: 'node_modules/**',
         typescript: require('typescript'),
-        tsconfigOverride: overrides
+        tsconfigOverride: {
+          compilerOptions: { declaration: true, emitDeclarationOnly: true },
+          include: ['src/**/*', 'types/**/*']
+        }
       })
     ].concat(plugins)
   },
