@@ -2,7 +2,7 @@
   <div>
     {{ state.text }}
     <HaDemo />
-    <HaImagePreview :data="state.images"></HaImagePreview>
+    <el-button type="primary">测试按钮</el-button>
   </div>
 </template>
 
