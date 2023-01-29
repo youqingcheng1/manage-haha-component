@@ -50,3 +50,7 @@ app.use(HaDemo)
 // demo使用
 <HauiDemo />
 ```
+
+#### 优化
+1. rollup.bundle.config.js 打包ts 和 js主文件 需要配置两个打包 问题
+2. 用rollup 打包对应的css样式
